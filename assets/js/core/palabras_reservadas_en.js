@@ -71,7 +71,7 @@ const PRINT = "print";
 const READ = "read";
 
 //EXITO
-const SUCCESS = "Ejecucion exitosa";
+const SUCCESS = "successful execution";
 
 //ERRORES GENERALES
 // &lt;declare&gt;: = <declare> 
