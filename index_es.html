@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interprete de Pseudocódigo">
+    <meta name="author" content="Jarrison Garcia - Jonny Berrio - Daniel Giraldo">
+
+    <title> Interprete de Pseudocodigo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link href="assets/css/animate-custom.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+	<!-- CONTADOR DE LINEAS JAQUERY -->
+	<script src="assets/js/jquery-linedtextarea.js"></script>
+	<link href="assets/css/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+  </head>
+ 
+  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  
+  	<div id="navbar-main">
+      <!-- Menu -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+          </button>
+          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+			<li><a href="#home" class="smoothScroll">Abrir Archivo</a></li>
+            <li><a href="#home" onclick="inicializar()" class="smoothScroll">Iniciar</a></li>
+			<li><a href="#team" class="smoothScroll"> Paso a Paso</a></li>
+			<li><a href="#about" class="smoothScroll"> Detener</a></li>
+			<li><a href="#services" onclick="resetCampos()" class="smoothScroll"> Restaurar</a></li>
+			<li><a href="#" onclick="salvar()" type="button" name="Submit" value="descargar como txt" id="Submit" class="smoothScroll"> Guardar Archivo</a></li>
+			<li><a href="#" class="smoothScroll"  data-toggle="modal" data-target="#ayuda"> Ayuda</a></li>
+		</div><!--/.nav-collapse -->
+      </div>
+    </div>
+    </div>
+	<!-- ==== FIN MENU ==== -->
+
+
+	<!-- ==== CONTENIDO ==== -->
+	<div id="headerwrap" id="home" name="home">
+
+		<header class="clearfix">
+			
+			<!-- Mensajes de error o de Exito -->
+			<div id="divMensajeID" class="msgMensaje" style="display:none;">
+				 <p id="mensajeID"/>
+			</div>
+			<div id="divErrorID" class="msgError" style="display:none;">
+				 <p id="errorID"/>
+			</div>
+			
+			<!-- tabla de contenido -->
+			<table border="1" width="100%" class="table table-hover">
+				<tr>
+					<!-- td width="20%">
+						a
+					</td -->
+					<!-- lineas de codigo -->
+					<td width="60%">
+						<table width="100%">
+							<tr height="10%">
+								<td><strong><h2 style="text-align: left; font-family: arial;">
+									Pseudocódigo</h2></strong>
+								</td>
+							</tr>
+							<tr height="90%"><td>
+								<textarea id="lineasCod" name="myTextArea" class="lined" rows="40" 
+									style="width:100%;"cols="180"  > 
+-- codigo de ejemplo									
+<declarar>
+
+	entero a,b = 4
+	entero i = 1,k = 1
+	
+	texto c = "texto"
+	texto x
+	booleano z = true
+	booleano y = false
+
+<fin declarar>									
+<inicio>
+	 
+	  i = 9+4/3
+	  imprima(i)
+	  i = 9+(4/3)
+	 imprima(i)
+	 
+--	 -- si (k<b) entonces
+		--imprima ("entro en el condicional")
+	  --fin si
+	  
+	  --i = 0
+	  --imprima(i)
+	  --mientras (i<b) entonces
+	--	imprima(i)
+	--	i = 300
+	--	imprima(i)
+	--  fin mientras
+	  
+	--   i = 0
+	   
+	--para i desde 1 hasta 10 Hacer
+		--imprima("ciclo 1")	
+		--para k desde 1 hasta 2 Hacer 
+		--	imprima("	ciclo 2")	
+		--fin para	
+	--fin para
+	
+<fin>
+									</textarea>
+							</td></tr>
+						</table>
+					
+					
+						
+					</td>
+					<!-- Variables y sus valores -->
+					<td width="20%">
+						<table width="100%">
+							<tr height="10%">
+								<td><strong><h2 style="text-align: left; font-family: arial;">
+									Variables y Valores</h2></strong>
+								</td>
+							</tr>
+							<tr height="90%"><td>
+								<textarea id="variablesCod" style="width:100%;height:100%;" rows="29" ></textarea>
+							</td></tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<!-- Impresiones de código -->
+					<td colspan="3">
+						<div><strong><h2 style="text-align: left; font-family: arial;">Consola</h2></strong></div>
+						<textarea class="lined" id="consolaCod" rows="8" style="width:100%;"> </textarea>
+					</td>
+				</tr>
+			</table>
+		</header>
+	</div><!-- /headerwrap -->
+	<!-- ==== FIN CONTENIDO ==== -->
+	
+	<!-- ==== DIALOGO DE AYUDA ==== -->
+	<div class="modal fade" id="ayuda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document" style="width:60%;">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">AYUDA</h4>
+		  </div>
+		  <div class="modal-body">
+		  
+			<table align="center" class="table table-hover">
+				<tr class="tabla_titulo" align="center">
+					<td colspan="4" align="center">Palabras Reservadas</td>
+				</tr>
+				 <tr class="tabla_titulo">
+					<td>Tipo</td>
+					<td>Palabra</td>
+					<td>Descripci&oacute;n</td>
+					<td>Ejemplo</td>
+				</tr>
+				<tr>
+                <td>Comentario</td>
+                <td> -- </td>
+                <td>Permite comentar el codigo.</td>
+                <td><strong> -- </strong> mi primer comentario descriptivo. </td>
+            </tr>
+			<tr>
+                <td>Variables</td>
+                <td style="text-align: justify;"><p>&lt;declarar&gt;<br/>&lt;fin declarar&gt;</td>
+                <td><strong>&lt;declarar&gt;:</strong> Permite declarar variables antes de iniciar el programa.<br/>
+					<strong>&lt;fin declarar&gt;:</strong> Finalizar la etiqueta declarar variables.
+				</td>
+                <td><strong>&lt;declarar&gt;</strong><br/>
+                    texto a,b;<br/>
+					<strong>&lt;fin declarar&gt;</strong></td>
+            </tr>
+			<tr>
+                <td>Variables</td>
+                <td style="text-align: justify;">texto<br/> entero <br/> real<br/> booleano</td>
+                <td><strong>texto:</strong> Permite crear variables que almacenan caracteres alfanuméricos.<br/>
+					<strong>entero:</strong> Permite crear variables que almacenan números enteros.<br/>
+					<strong>real:</strong> Permite crear variables que almacenan números reales.<br/>
+					<strong>booleano:</strong> Permite crear variables que almacenan valores booleanos (true o false).
+				</td>
+                <td>&lt;declarar&gt;<br/>
+                    <strong>texto</strong> a = "texto";<br/>
+					<strong>entero</strong> b = 1;<br/>
+					<strong>real</strong> c = 1.1;<br/>
+					<strong>booleano</strong> d = true;<br/>
+					<strong>&lt;fin declarar&gt;</strong><br/>
+					&lt;fin declarar&gt;
+				</td>
+            </tr>
+            <tr>
+                <td>Inicio - Fin</td>
+                <td style="text-align: justify;"><p>&lt;inicio&gt;<br/>&lt;fin&gt;</td>
+                <td><strong>&lt;inicio&gt;:</strong> permite iniciar el código del programa, este debe ir después de las declaraciones de variables.<br/>
+					<strong>&lt;fin&gt;:</strong> permite finalizar el código del programa, este debe ser la última palabra en el sistema.
+				</td>
+                <td><strong>&lt;inicio&gt;</strong><br/>
+                    algoritmo<br/>
+					<strong>&lt;fin&gt;</strong></td>
+            </tr>    
+			
+			<tr>
+                <td>Condicionales</td>
+                <td>si<br/>entonces<br/>sino si<br/>sino<br/>fin si</td>
+                <td style="text-align: justify;"><strong>si:</strong>  Permite decidir entre dos opciones resultantes de la evaluación de una sentencia, y ejecutar un código.<br/>
+					<strong>entonces:</strong>  Permite luego de cada expresión ya sea un ciclo repetitivo o un condicional si escribir nuestro código a ejecutar  Si la evaluación es positiva hace una cosa.<br/> 
+					<strong>sino si:</strong>  Permite decidir entre dos opciones resultantes de la evaluación de una sentencia. Si la primera evaluación no cumple.<br/>
+					<strong>sino:</strong>  podremos poner otra condición a evaluar.<br/>
+					<strong>fin si:</strong> Permite finalizar la condicional si.
+				</td>
+                <td> <strong>si</strong>  (a > b) <strong>entonces</strong>  <br/>
+                     &nbsp;&nbsp;algoritmo<br/>
+                    <strong>sino si</strong> (7 <= 5) <strong>entonces</strong>  <br/>
+                     &nbsp;&nbsp;algoritmo<br/>
+					 <strong>sino entonces</strong> <br/>
+						&nbsp;&nbsp;algoritmo<br/>
+                    <strong>fin si</strong>
+                </td>
+            </tr> 
+            
+            <tr>
+                <td>Ciclos o repetidores</td>
+                <td>para<br/>desde<br/>hasta<br/>hacer<br/>fin para</td>
+                <td style="text-align: justify;">
+					<strong>para:</strong> Permite repetir una o más instrucciones un determinado número de veces..<br/>
+					<strong>desde:</strong> Permite indicar desde que numero comenzar con el ciclo o repeticiones.<br/>
+					<strong>hasta:</strong> Permite indicar hasta que numero finalizar el ciclo o repeticiones.<br/>
+					<strong>hacer:</strong> Permite indicar el código a ejecutar para cada iteración.<br/>
+					<strong>fin para:</strong> Permite finalizar la etiqueta para.
+				</td>
+                <td> <strong>para</strong> i  <strong>desde</strong> 1 <strong>hasta</strong> 10 <strong>Hacer</strong> <br/>
+                     &nbsp;&nbsp;algoritmo<br/>
+                    <strong>fin para</strong>
+                  </td>
+            </tr>
+			
+			 <tr>
+                <td>Ciclos o repetidores</td>
+                <td>mientras<br/>hacer<br/>fin mientras</td>
+                <td>
+					<strong>mientras:</strong> Permite repetir una o más instrucciones según una condición.<br/>
+					<strong>hacer:</strong> Permite indicar el código a ejecutar para cada iteración.<br/>
+					<strong>fin mientras:</strong> Permite finalizar la etiqueta mientras.
+				</td>
+                <td> <strong>mientras</strong> (b == 13) <strong>Hacer</strong> <br/>
+                     &nbsp;&nbsp;algoritmo<br/>
+                    <strong>fin mientras</strong>
+                  </td>
+            </tr>
+			
+			<tr>
+                <td>Funciones</td>
+                <td style="text-align: justify;"> imprima</td>
+                <td><strong>imprima:</strong> Permite imprimir en la consola de datos el valor que se asigne.<br/>
+				<strong>lea:</strong> Permite capturar valores de la consola.
+				</td>
+                <td>
+                    <strong>imprima</strong> (variable)<br/>
+					<strong>lea(i)</strong> 
+				</td>
+            </tr>
+			<tr>
+                <td>Operaciones</td>
+                <td style="text-align: justify;"> +<br/>-<br/>*<br/>/<br/>|</td>
+                <td><strong>Suma (+):</strong> Permite sumar dos variables o números.<br/>
+				<strong>Resta (-):</strong> Permite restar dos variables o números.<br/>
+				<strong>Multiplicación (*):</strong> Permite multiplicar dos variables o números.<br/>
+				<strong>División (/):</strong> Permite dividir dos variables o números.<br/>
+				<strong>Concatenar (|):</strong> Permite concatenar dos variables,  números o texto.
+				</td>
+                <td>
+                    3<strong> + </strong> 7<br/>
+					1<strong> * </strong> a<br/>
+					b<strong> - </strong> 2<br/>
+					20<strong> / </strong> 15<br/>
+					a<strong> | </strong> c
+				</td>
+            </tr>
+            
+			 
+			 </table>
+		 
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- ==== FIN DIALOGO DE AYUDA ==== -->
+	
+	<!-- ==== FOOTER ==== -->
+	<div id="footerwrap">
+		<div class="container">
+			<h4>:-) <a href="#">Politecnico GranColombiano</a> - 2016</h4>
+		</div>
+	</div>
+	<!-- ==== FIN FOOTER ==== -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<!-- script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script -->
+	<!-- FUNCIONES PROPIAS -->
+	<script type="text/javascript" src="assets/js/core/almacenamiento.js"></script>
+	<script type="text/javascript" src="assets/js/core/palabras_reservadas_es.js"></script>
+	<script type="text/javascript" src="assets/js/core/main.js"></script>
+	<script type="text/javascript" src="assets/js/tabby.js"></script>
+	
+
+  </body>
+</html>
