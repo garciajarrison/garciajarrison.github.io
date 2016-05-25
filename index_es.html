@@ -75,28 +75,45 @@
 							<tr height="90%"><td>
 								<textarea id="lineasCod" name="myTextArea" class="lined" rows="40" 
 									style="width:100%;"cols="180"  > 
--- codigo de ejemplo									
-<declarar>
-
-	entero a,b = 4
-	entero i = 1,k = 1
+	-- codigo de ejemplo									
+	<declarar>
 	
-	texto c = "texto"
-	texto x
-	booleano z = true
-	booleano y = false
-
-<fin declarar>									
-<inicio>
-	 imprima(i)
-	  i = 9+4/2 --6.5
-	  imprima(i)
-	 i = 9+(4/2) --11
-	 imprima(i)
-	 
+		entero a,b = 4
+		entero i = 1,k = 1
+		
+		texto c = "texto"
+		texto x
+		booleano z = true
+		booleano y = false
 	
-	
-<fin>
+	<fin declarar>									
+	<inicio>
+		 imprima(i)
+		  i = 9+4
+		  imprima(i)
+		 
+		  si (k<b) entonces
+			imprima ("entro en el condicional")
+		  fin si
+		  
+		  i = 0
+		  imprima(i)
+		  mientras (i<b) entonces
+			imprima(i)
+			i = 300
+			imprima(i)
+		  fin mientras
+		  
+		   i = 0
+		   
+		para i desde 1 hasta 10 Hacer
+			imprima("ciclo 1")	
+			para k desde 1 hasta 2 Hacer 
+				imprima("	ciclo 2")	
+			fin para	
+		fin para
+		
+	<fin>
 									</textarea>
 							</td></tr>
 						</table>
