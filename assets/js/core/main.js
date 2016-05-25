@@ -361,7 +361,7 @@ function validarAsignacionVariable(linea, indice){
     //se divide la linea de codigo por letras
     var letra = linea.split(""); 
     
-    //se reccore cada letra para la asignación
+    //se reccore cada letra para la asignaciÃ³n
     for (var i = 0;i < letra.length ;i++) {
         
         //se toma la variable de asignacion
@@ -379,7 +379,10 @@ function validarAsignacionVariable(linea, indice){
             operacion.push(letra[i].trim());
             palabra = "";
         }else{
-            palabra = palabra + letra[i].trim();
+			if(letra[i].trim() != "("  && letra[i].trim() != ")"){
+				palabra = palabra + letra[i].trim();
+			}
+            
         }
     }
     
@@ -426,7 +429,7 @@ function validarAsignacionVariable(linea, indice){
        
         //Validamos si quedo una operacion pendiente
         if(contadorOp == 1){
-            acumulado = realizarOperacion(opera1, acumulado, operacion[operaciones]);
+            acumulado = realizarOperacion(acumulado, opera1, operacion[operaciones]);
         }
         
        // asignacion
@@ -501,7 +504,7 @@ function asignarValorVarible(variableConsultar, valor){
 }
 
 //REALIZA LAS OPERACIONES ENVIADAS
-function realizarOperacion(valorV2, valorV1 , operacion){
+function realizarOperacion(valorV1, valorV2, operacion){
     var retorno;
 
     //valiamos si la variable existe
@@ -579,7 +582,7 @@ function validaCicloFor(linea, indice, indiceMax) {
             //validacion de numero de repeciones
             if(i == STEP_FOR_VALUE_HASTA){
                  cantidadRepeticiones = parseInt(estructuraFor[i]); 
-                  //Compruebo si es un valor numérico 
+                  //Compruebo si es un valor numÃ©rico 
                   if (isNaN(cantidadRepeticiones)) { 
                      errores.push(ERROR_MISS_FOR_HASTA_VALUE + (indice + 1));
                   }
@@ -761,7 +764,7 @@ function validarExpresion(valorExpresion) {
         //una variable
         //validamos si es un numero
         variable = parseInt(valorExpresion);
-        //Compruebo si es un valor numérico 
+        //Compruebo si es un valor numÃ©rico 
         if (isNaN(variable)){
             //si no es numero validamos las variables
             valorV1 = consultarValorVariable(valorExpresion);
