@@ -1,82 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Language Selector</title>
+<head>
+    <meta charset="utf-8">
+    <title>Jarrison & Ana</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style_l.css">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Favicon and touch icons -->
-        <!-- link rel="shortcut icon" href="assets/ico/favicon.png" -->
-    </head>
-	
-	<script>
-		function direccionarIdioma(itemSel){
-			if(itemSel.value == "English"){
-				document.location.href="http://garciajarrison.github.io/index_en.html";   
-			}else if(itemSel.value == "Spanish"){
-				document.location.href="http://garciajarrison.github.io/index_es.html";   
-			}
-		}
-	</script>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
 
-    <body>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-        <!-- Top content -->
-        <div class="top-content">
-        	
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Welcome to the interpreter pseudocode</strong></h1>
-                            <div class="description">
-                            	<p>
-									This project was developed by: 
-	                            	<strong>Jarrison Garcia</strong>, <strong>Jonny Berrio</strong> and <strong>Daniel Giraldo</strong>
-                            	</p>
-                            </div>
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="font-secondary text-white mb-n2">Jarrison <span class="text-primary">&</span> Ana</h1>
+        </a>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Inicio</a>
+                <a href="#invite" class="nav-item nav-link">Invitación</a>
+                <a href="#about" class="nav-item nav-link">Nosotros</a>
+                <a href="#story" class="nav-item nav-link">Historia</a>
+            </div>
+            <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                <h1 class="font-secondary text-white mb-n2">Jarrison <span class="text-primary">&</span> Ana</h1>
+            </a>
+            <div class="navbar-nav mr-auto py-0">
+                <a href="#gallery" class="nav-item nav-link">Galería</a>
+                <a href="#event" class="nav-item nav-link">Evento</a>
+                <a href="#confirm" class="nav-item nav-link">Confirmar Asistencia</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/inicial1.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jarrison & Ana</h1>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h3>Please, select your language</h3>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-key"></i>
-                        		</div>
-                            </div>
-                            <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Language</label>
-										<select class="form-control" onchange="javascript:direccionarIdioma(this);">
-											<option>Select Language</option>
-											<option>English</option>
-											<option>Spanish</option>
-										</select>
-			                        </div>
-			                    </form>
-		                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/inicial2.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jarrison & Ana</h1>
                         </div>
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-prev-icon mt-3"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-next-icon mt-3"></span>
+                </div>
+            </a>
         </div>
+    </div>
+    <!-- Carousel End -->
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/js/bootstrap_l.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/scripts_l.js"></script>
-    </body>
+    <!-- invite -->
+    <div class="container-fluid py-5" id="invite">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 id="invite-1" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">No es posible
+                    cargar invitación</h6>
+                <h1 id="invite-title" class="font-secondary display-4">No es posible cargar invitación</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div id="membersNone" class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0" style="display: none;">
+                <div class="col-md-12 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5" style="text-align-last: center;">
+                        <h3 id="invite-members" class="mb-3">Invitados</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End invite -->
+
+    <!-- rules -->
+    <div class="container-fluid py-5" id="rules" style="display: none;">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Códigos</h6>
+                <h1 class="font-secondary display-4">Vestimenta & Detalle</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">Vestuario semi-formal</h3>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Hombres</h3>
+
+                        <p>El caballero debe ser portador de un elegante traje formal de corbata opcional y zapatillas.</p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Mujeres</h3>
+                        <p>La dama debe portar un elegante vestido con restricción del color blanco., zapato elegante y una hermosa sonrisa.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/formal.jpeg" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/sobre.jpeg" style="object-fit: cover;">
+                </div>
+                <div class="col-md-6 p-0 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">Detalle</h3>
+                        <p>
+                            Tu compañia es todo lo que deseamos, pero si quisieras llevar un regalo, preferimos que sea una contribución en efectivo a nuestra luna de miel.
+                        </p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3">
+                            <i class="fa fa-cash text-primary pr-3"></i>
+                            Lluvia de sobres.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rules End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about"  style="display: none;">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Acerca de</h6>
+                <h1 class="font-secondary display-4">Nosotros</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">Saludos...</h3>
+                        <p>Para nosotros es un honor poder invitarte y que hagas parte de uno de los días más
+                            importantes de nuestras vidas, ese día no gustaría poder
+                            contar contigo y que te unas a nuestra celebración.
+                        </p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i
+                                class="fa fa-male text-primary pr-3"></i>Jarry, Ana y Alicia.</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/1.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/11.jpg" style="object-fit: cover;">
+                </div>
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/10.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Story Start -->
+    <div class="container-fluid py-5" id="story" style="display: none;">
+        <div class="container pt-5 pb-3">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Historia</h6>
+                <h1 class="font-secondary display-4">Nuestra historia de amor</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="container timeline position-relative p-0">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <img class="img-fluid mr-md-3" src="img/12.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                            <h4 class="mb-2">Primer encuentro</h4>
+                            <p class="text-uppercase mb-2">Junio 2010</p>
+                            <p class="m-0">Nos conocimos durante el estudio, nos tomamos el tiempo de conocernos y
+                                estudiar jutos disfrutarndo nuestros días.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                            <h4 class="mb-2">Primeras citas</h4>
+                            <p class="text-uppercase mb-2">Diciembre 2010</p>
+                            <p class="m-0">Todo el proceso de estudiar juntos y salir con amigos, nos permitió
+                                acercarnos y querer estar juntos, fue así como todo comenzó.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <img class="img-fluid ml-md-3" src="img/2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <img class="img-fluid mr-md-3" src="img/4.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                            <h4 class="mb-2">Propuesta</h4>
+                            <p class="text-uppercase mb-2">Septiembre 2022</p>
+                            <p class="m-0">Planeamos nuestras vacaciones por Europa, fue allí dónde le propuse
+                                matrimonio y con ello traer la bendición de Dios a nuestro hogar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                            <h4 class="mb-2">Matrimonio</h4>
+                            <p class="text-uppercase mb-2">Noviembre 2023</p>
+                            <p class="m-0">Aquí seguimos escribiendo nuestra historia.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <img class="img-fluid ml-md-3" src="img/7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Story End -->
+
+
+    <!-- Gallery Start -->
+    <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;display: none;">
+        <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Galería</h6>
+            <h1 class="font-secondary display-4 text-white">Nuestros recuerdos</h1>
+            <i class="far fa-heart text-white"></i>
+        </div>
+        <div class="owl-carousel gallery-carousel">
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/15.jpg" alt="">
+                <a href="img/15.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/14.jpg" alt="">
+                <a href="img/14.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/13.jpg" alt="">
+                <a href="img/13.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/9.jpg" alt="">
+                <a href="img/9.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/11.jpg" alt="">
+                <a href="img/11.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/5.jpg" alt="">
+                <a href="img/5.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/8.jpg" alt="">
+                <a href="img/8.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+
+    <!-- Event Start -->
+    <div class="container-fluid py-5" id="event" style="display: none;">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Ceremonia</h6>
+                <h1 class="font-secondary display-4">Eucaristía y Evento</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">
+                        El matrimonio se realizará el día 18 de noviembre.
+                    </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <img class="img-fluid mb-4" src="img/iglesia.jpg" alt="">
+                        <h4 class="mb-3">Eucaristía</h4>
+                        <p class="mb-2">Cra 86 # 46 - 37 Parroquia la inmaculada, Medellín</p>
+                        <p class="mb-0">12:00PM - 13:00PM</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-left ml-md-3">
+                        <img class="img-fluid mb-4" src="img/party1.jpg" alt="">
+                        <h4 class="mb-3">Recepción</h4>
+                        <p class="mb-2">Cra 80 # 45GG - 24, Salón Francés, Medellín</p>
+                        <p class="mb-0">6:00PM - 12:00PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event End -->
+
+    <!-- invite -->
+    <div class="container-fluid py-5" id="confirm" style="display: none;">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 id="invite-1" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">confirmar</h6>
+                <h1 id="invite-title" class="font-secondary display-4">Confirmar asistencia</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div id="membersNone" class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-12 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5" style="text-align-last: center;">
+                        <h3 id="invite-members" class="mb-3">
+                            <a href="https://w.app/pfnUMH">Confirma tu asistencia aquí</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End invite -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-3 text-white">Gracias</h1>
+                <i class="far fa-heart text-white"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i
+            class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+
+        class Family {
+            constructor(family, members) {
+                this.family = family;
+                this.members = members;
+            }
+        }
+
+        function loadInvitation() {
+
+            let members = new Map([
+                ['cecilia', (new Family('Jimenez Martinez', 'Martha Cecilia Jimenez<br> Martha Olga Martinez'))],
+                ['maria', (new Family('Riascos Jimenez', 'Maria Isabel Riascos<br> Manuela Garcia Riascos<br> Jean Carlos Jimenez'))],
+                ['juan', new Family('Jimenez Muñoz', 'Gloria Cecilia Muñoz<br> Juan Carlos Jimenez<br> Juan Esteban Jimenez<br> Leo Muñoz')],
+                ['tabares', new Family('Tabares Jimenez', 'Sandra  Marcela Tabares<br> Alba Jimenez<br> Viviana Tabares<br> Mynor Rodriguez<br> Jaime Tabares')],
+                ['claudia', new Family('Jimenez Martinez', 'Claudia Patricia Jimenez<br> Edgar Montoya')],
+                ['glorianora', new Family('Ruiz Jimenez', 'Gloria Jimenez<br> Nora Ruiz')],
+                ['santiago', new Family('Giraldo', 'Luz Nora, Santiago Jimenez<br> Francisco Jimenez')],
+                ['angelica', new Family('Jimenez', 'Angelica Jimenez<br> Enrique Echeverry<br> Samael Echeverry<br> Samanta Echeverry')],
+                ['lola', new Family('Lola', 'Maria Ubenly')],
+                ['vallejo', new Family('Vallejo', 'Martha Vallejo<br> Juan Jose Jimenez<br> Juliana Jimenez<br> Salome')],
+                ['martha', new Family('Paniagua Muñoz', 'Martha Elena<br> Karen Paniagua<br> Edgar David Morales')],
+                ['carmen', new Family('Martinez Paniagua', 'Carmen Paniagua<br> Fredy Martinez<br> Eliza')],
+                ['maritza', new Family('Martinez Amaya', 'Maritza Amaya<br> Emanuel Martinez<br> Camila Martinez')],
+                ['bedoya', new Family('Bedoya Paniaguua', 'Maria Paniagua<br> Rafael Bedoya<br> Diana Bedoya<br> Michael Mika<br> Leidy Bedoya<br> Edy Zapata<br> Valeria Bedoya<br> Juan David Arenas')],
+                ['dolly', new Family('Ramirez Paniagua', 'Dolly Paniagua<br> David Alejandro Ramirez')],
+                ['maribel', new Family('Ramirez Urrego', 'Maribel Ramirez Paniagua<br> Valerin Usuga<br> Andres Urrego')],
+                ['cristian', new Family('Paniagua Muñoz', 'Rosa Paniagua<br> Hugo Muñoz<br> Cristian Camilo Paniagua<br> Paola Londoño')],
+                ['alex', new Family('Muñoz Gomez', 'Alex Muñoz<br> Dalia Gomez<br> Estefania Gomez<br> Maximiliano Muñoz')],
+                ['nato', new Family('Paniagua', 'Paola<br> Mary<br> Martha<br> Sebastian<br> Isaac<br> Tio Ñato Alias Don Berna')],
+                ['hugo', new Family('Gonzales Duran', 'Hugo Gonzales<br> Estefania Duran')],
+                ['arbey', new Family('Vargas', 'Arbey Vargas')],
+                ['juliana', new Family('Juliana', 'Juliana y Esposo')],
+                ['sara', new Family('Restrepo', 'Sara Restrepo')],
+                ['sandra', new Family('Rave', 'Sandra Rave')],
+                ['elizabeth', new Family('Usuga Santana', 'Elizabeth Usuga')]
+            ]);
+
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const id = urlParams.get('id')
+            let selected = members.get(id);
+            document.getElementById("invite-1").innerHTML = "Invitación";
+            document.getElementById("invite-title").innerHTML = selected.family;
+            document.getElementById("invite-members").innerHTML = selected.members;
+            document.getElementById("membersNone").style.display = 'block';
+            document.getElementById("about").style.display = 'block';
+            document.getElementById("story").style.display = 'block';
+            document.getElementById("gallery").style.display = 'block';
+            document.getElementById("event").style.display = 'block';
+            document.getElementById("confirm").style.display = 'block';
+        }
+
+        loadInvitation();
+
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 
 </html>
